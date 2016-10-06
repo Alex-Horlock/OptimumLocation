@@ -19,6 +19,7 @@ namespace whereToLive
     public partial class MapForm : Form
     {
         GMapOverlay destinationOverlay;
+        GMapOverlay commuteOverlay;
         GMapMarker currentMarker;
 
         public MapForm()
@@ -32,17 +33,20 @@ namespace whereToLive
             myMap.DragButton = MouseButtons.Left;
 
             destinationOverlay = new GMapOverlay("Destinations");
+            commuteOverlay = new GMapOverlay("Commute");
             myMap.Overlays.Add(destinationOverlay);
+            myMap.Overlays.Add(commuteOverlay);
+
         }
 
         private void addDestionationButton_Click(object sender, EventArgs e)
         {
             AddDestinationMarker(myMap.Position, visitsPerWeekMaskedTextBox.Text);
 
-            int n = dataGridView1.Rows.Add();
+            int n = destinationDataGridView.Rows.Add();
 
-            dataGridView1.Rows[n].Cells[0].Value = destinationIDTextBox.Text;
-            dataGridView1.Rows[n].Cells[1].Value = visitsPerWeekMaskedTextBox.Text;
+            destinationDataGridView.Rows[n].Cells[0].Value = destinationIDTextBox.Text;
+            destinationDataGridView.Rows[n].Cells[1].Value = visitsPerWeekMaskedTextBox.Text;
         }
 
         private void myMap_MouseMove(object sender, MouseEventArgs e)
@@ -65,14 +69,7 @@ namespace whereToLive
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Commute currentCommute = new Commute();
-            currentCommute.destinations = new Destination[destinationOverlay.Markers.Count];
-
-            for (int i = 0; i < destinationOverlay.Markers.Count; i++)
-            {
-                currentCommute.destinations[i].location = destinationOverlay.Markers[i].Position;
-                currentCommute.destinations[i].visitsPerWeek = Convert.ToDouble(destinationOverlay.Markers[i].Tag);
-            }             
+            Commute currentCommute = GetCurrentCommute();    
 
             XmlSerializer x = new XmlSerializer(typeof(Commute));
 
@@ -112,10 +109,33 @@ namespace whereToLive
 
         private void AddDestinationMarker(PointLatLng p, string visits)
         {
-            GMapMarker marker = new GMarkerGoogle(p, GMarkerGoogleType.red);
+            GMapMarker marker = new GMarkerGoogle(p, GMarkerGoogleType.black_small);
             marker.ToolTipText = "ID: " + destinationIDTextBox.Text + "\n" + "Freq: " + visits;
             marker.Tag = visits;
             destinationOverlay.Markers.Add(marker);
+        }
+
+        private void calculateToolStripButton_Click(object sender, EventArgs e)
+        {
+            Commute currentCommute = GetCurrentCommute();
+            PointLatLng p = CommuteDistance.FindWeightedCenterOfCommute(currentCommute);
+
+            GMapMarker home = new GMarkerGoogle(p, GMarkerGoogleType.red);
+            commuteOverlay.Markers.Add(home);
+        }
+
+        private Commute GetCurrentCommute()
+        {
+            Commute currentCommute = new Commute();
+            currentCommute.destinations = new Destination[destinationOverlay.Markers.Count];
+
+            for (int i = 0; i < destinationOverlay.Markers.Count; i++)
+            {
+                currentCommute.destinations[i].location = destinationOverlay.Markers[i].Position;
+                currentCommute.destinations[i].visitsPerWeek = Convert.ToDouble(destinationOverlay.Markers[i].Tag);
+            }
+
+            return currentCommute;
         }
     }
 }

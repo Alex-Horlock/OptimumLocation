@@ -4,13 +4,12 @@ This app aims to develop the algorithms required to answer this question.
 
 To Do:
 
-Create Data Store
-Add Loading and saving classs to xml
 Add Bespoke Icons
 Improve UI
 Add Map type selection
 Add Polygons of equal Commute distance
 Add times and mode of transport.
+Add ability to edit marker names and frequency from datagridview.
 
 
 ##Icons

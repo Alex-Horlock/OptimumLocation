@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GMap.NET.WindowsForms;
 using GMap.NET;
+using whereToLive.Structs;
 
 namespace whereToLive.Functions
 {
@@ -31,6 +32,27 @@ namespace whereToLive.Functions
             double dist = Math.Sqrt(Math.Pow((deltaY), 2) + Math.Pow((deltaX), 2));
 
             return dist;
+        }
+
+        public static PointLatLng FindWeightedCenterOfCommute(Commute commute)
+        {
+            PointLatLng weightedCommuteCenter = new PointLatLng();
+            double weightedLatSum = 0;
+            double weightedLngSum = 0;
+            double sumVisitsPerWeek = 0;
+
+            for (int i = 0; i < commute.destinations.Length; i++)
+            {
+                Destination d = commute.destinations[i];
+                weightedLatSum += d.location.Lat * d.visitsPerWeek;
+                weightedLngSum += d.location.Lng * d.visitsPerWeek;
+                sumVisitsPerWeek += d.visitsPerWeek;
+            }
+
+            weightedCommuteCenter.Lat = weightedLatSum / sumVisitsPerWeek;
+            weightedCommuteCenter.Lng = weightedLngSum / sumVisitsPerWeek;
+
+            return weightedCommuteCenter;
         }
     }
 }

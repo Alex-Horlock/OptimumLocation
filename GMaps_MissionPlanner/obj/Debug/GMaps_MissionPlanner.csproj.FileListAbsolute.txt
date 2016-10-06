@@ -11,3 +11,16 @@ C:\Users\Alex\documents\visual studio 2015\Projects\GMaps_MissionPlanner\GMaps_M
 C:\Users\Alex\documents\visual studio 2015\Projects\GMaps_MissionPlanner\GMaps_MissionPlanner\bin\Debug\GMap.NET.WindowsForms.xml
 C:\Users\Alex\documents\visual studio 2015\Projects\GMaps_MissionPlanner\GMaps_MissionPlanner\bin\Debug\GMap.NET.Core.xml
 C:\Users\Alex\documents\visual studio 2015\Projects\GMaps_MissionPlanner\GMaps_MissionPlanner\obj\Debug\WhereToLive.MapForm.resources
+C:\Users\Alex\Documents\Visual Studio 2015\Projects\OptimumLocation\GMaps_MissionPlanner\bin\Debug\GMaps_MissionPlanner.exe.config
+C:\Users\Alex\Documents\Visual Studio 2015\Projects\OptimumLocation\GMaps_MissionPlanner\obj\Debug\GMaps_MissionPlanner.exe
+C:\Users\Alex\Documents\Visual Studio 2015\Projects\OptimumLocation\GMaps_MissionPlanner\obj\Debug\GMaps_MissionPlanner.pdb
+C:\Users\Alex\Documents\Visual Studio 2015\Projects\OptimumLocation\GMaps_MissionPlanner\bin\Debug\GMaps_MissionPlanner.exe
+C:\Users\Alex\Documents\Visual Studio 2015\Projects\OptimumLocation\GMaps_MissionPlanner\bin\Debug\GMaps_MissionPlanner.pdb
+C:\Users\Alex\Documents\Visual Studio 2015\Projects\OptimumLocation\GMaps_MissionPlanner\bin\Debug\GMap.NET.Core.dll
+C:\Users\Alex\Documents\Visual Studio 2015\Projects\OptimumLocation\GMaps_MissionPlanner\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\Alex\Documents\Visual Studio 2015\Projects\OptimumLocation\GMaps_MissionPlanner\bin\Debug\GMap.NET.Core.xml
+C:\Users\Alex\Documents\Visual Studio 2015\Projects\OptimumLocation\GMaps_MissionPlanner\bin\Debug\GMap.NET.WindowsForms.xml
+C:\Users\Alex\Documents\Visual Studio 2015\Projects\OptimumLocation\GMaps_MissionPlanner\obj\Debug\GMaps_MissionPlanner.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Documents\Visual Studio 2015\Projects\OptimumLocation\GMaps_MissionPlanner\obj\Debug\whereToLive.MapForm.resources
+C:\Users\Alex\Documents\Visual Studio 2015\Projects\OptimumLocation\GMaps_MissionPlanner\obj\Debug\GMaps_MissionPlanner.Properties.Resources.resources
+C:\Users\Alex\Documents\Visual Studio 2015\Projects\OptimumLocation\GMaps_MissionPlanner\obj\Debug\GMaps_MissionPlanner.csproj.GenerateResource.Cache
