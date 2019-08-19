@@ -1,11 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptimumLocation", "OptimumLocation\OptimumLocation.csproj", "{D7C7650A-6B8F-436F-AE5B-BCA0B9814DE1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptimumLocation.Tests", "OptimumLocation.Tests\OptimumLocation.Tests.csproj", "{4F891E05-836C-41BF-A322-12479B3C8AD5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D06252D2-21D7-4A06-83C3-8ABBE7E61D43}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptimumLocationWebsite", "OptimumLocationWebsite\OptimumLocationWebsite.csproj", "{987AF5C2-3969-4FFA-A498-0811A7586AAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +28,15 @@ Global
 		{4F891E05-836C-41BF-A322-12479B3C8AD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F891E05-836C-41BF-A322-12479B3C8AD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F891E05-836C-41BF-A322-12479B3C8AD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{987AF5C2-3969-4FFA-A498-0811A7586AAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{987AF5C2-3969-4FFA-A498-0811A7586AAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{987AF5C2-3969-4FFA-A498-0811A7586AAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{987AF5C2-3969-4FFA-A498-0811A7586AAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F010BBB7-2E7B-4256-9934-2A0A93E7FCD2}
 	EndGlobalSection
 EndGlobal
